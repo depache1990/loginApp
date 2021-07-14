@@ -11,7 +11,6 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="loginApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -23,18 +22,19 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="JTc-0k-sqE">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="42"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="Xgu-0h-uB7">
                                         <rect key="frame" x="0.0" y="66" width="354" height="42"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rID-l1-CgJ">
                                         <rect key="frame" x="0.0" y="132" width="354" height="42"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="Log In"/>
                                         <connections>
+                                            <action selector="logInAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dDJ-Eb-UqZ"/>
                                             <segue destination="8ts-jv-HTe" kind="presentation" id="bdh-P8-O7W"/>
                                         </connections>
                                     </button>
@@ -46,8 +46,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <state key="normal" title="Forgot User Name?"/>
                                                 <connections>
-                                                    <action selector="forgotUserNameAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qah-I0-dZd"/>
-                                                    <action selector="forgotUserNameAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7ie-cf-2SA"/>
+                                                    <action selector="forgotUserNameAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="G2y-FX-5xL"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EqV-yF-Afg">
@@ -58,7 +57,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <state key="normal" title="Forgot Pasword ?"/>
                                                 <connections>
-                                                    <action selector="forgotPasswordAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="7G1-TP-ApR"/>
+                                                    <action selector="forgotPasswordAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="G7B-zo-Y6G"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -77,18 +76,20 @@
                     </view>
                     <navigationItem key="navigationItem" id="oeY-37-IPj"/>
                     <connections>
-                        <outlet property="forgotUserNameButton" destination="Dxr-jg-UDT" id="O9P-oy-taL"/>
+                        <outlet property="LogInButton" destination="rID-l1-CgJ" id="JJG-VH-ZZB"/>
+                        <outlet property="logInButton" destination="rID-l1-CgJ" id="J6r-Dy-BSD"/>
                         <outlet property="logInTextField" destination="JTc-0k-sqE" id="RDe-aS-Rcl"/>
                         <outlet property="passwordTextField" destination="Xgu-0h-uB7" id="iwK-HQ-Nel"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1957.9710144927537" y="77.678571428571431"/>
         </scene>
-        <!--Welcome View Controller-->
+        <!--WelcomeViewControler-->
         <scene sceneID="KFA-WP-yfz">
             <objects>
-                <viewController id="8ts-jv-HTe" customClass="WelcomeViewController" customModule="loginApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="WelcomeViewControler" id="8ts-jv-HTe" customClass="WelcomeViewController" customModule="loginApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iun-M0-A9U">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -101,9 +102,12 @@
                                     <action selector="logOutAction" destination="8ts-jv-HTe" eventType="touchUpInside" id="buH-Y2-kQM"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j4f-mh-VO4">
-                                <rect key="frame" x="186" y="53" width="59" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uqu-cL-Vye">
+                                <rect key="frame" x="50" y="20" width="314" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="ick-LA-sZa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -111,15 +115,15 @@
                         <viewLayoutGuide key="safeArea" id="YJS-gJ-Fmh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="YJS-gJ-Fmh" firstAttribute="trailing" secondItem="Uqu-cL-Vye" secondAttribute="trailing" constant="50" id="1Yc-tL-tv0"/>
                             <constraint firstItem="cIM-VW-T3C" firstAttribute="centerY" secondItem="iun-M0-A9U" secondAttribute="centerY" id="2Y2-j7-Jsb"/>
-                            <constraint firstItem="YJS-gJ-Fmh" firstAttribute="trailing" secondItem="j4f-mh-VO4" secondAttribute="trailing" constant="169" id="ObF-cO-Hs8"/>
                             <constraint firstItem="cIM-VW-T3C" firstAttribute="centerX" secondItem="iun-M0-A9U" secondAttribute="centerX" id="OrC-Mu-m0k"/>
-                            <constraint firstItem="j4f-mh-VO4" firstAttribute="leading" secondItem="YJS-gJ-Fmh" secondAttribute="leading" constant="186" id="iAy-n6-6FX"/>
-                            <constraint firstItem="j4f-mh-VO4" firstAttribute="top" secondItem="YJS-gJ-Fmh" secondAttribute="top" constant="53" id="pQF-dS-JJO"/>
+                            <constraint firstItem="Uqu-cL-Vye" firstAttribute="top" secondItem="YJS-gJ-Fmh" secondAttribute="top" constant="20" id="io3-IW-jN2"/>
+                            <constraint firstItem="Uqu-cL-Vye" firstAttribute="leading" secondItem="YJS-gJ-Fmh" secondAttribute="leading" constant="50" id="zyj-Zd-4f8"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="mainLabel" destination="j4f-mh-VO4" id="lpG-L7-aJ6"/>
+                        <outlet property="mainLabel" destination="Uqu-cL-Vye" id="yQK-5x-Ch7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="coJ-25-UPS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
