@@ -10,9 +10,11 @@ import UIKit
 class WelcomeViewController: UIViewController {
     @IBOutlet weak var mainLabel: UILabel!
     
+    var mainUserLabel: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        mainLabel.text = mainUserLabel
       
     }
     

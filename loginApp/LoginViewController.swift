@@ -6,7 +6,7 @@
 //
 
 import UIKit
-let log = [(login: "eugenia", password: "123456"),(login: "swiftbook", password: "123")]
+let log = [(login: "eugenia", password: "123456")]
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var logInTextField: UITextField!
@@ -16,7 +16,11 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let settingVC = segue.destination as? WelcomeViewController else { return }
+        settingVC.mainUserLabel = logInTextField.text
     }
   
     @IBAction func forgotUserNameAction() {
@@ -34,7 +38,7 @@ class LoginViewController: UIViewController {
             } else {
                 logInButton.isEnabled = false
                 showAlert(title: "Oooops", message: "Wrong password or user name,please try again")
-                break
+                
             }
         }
     }
@@ -42,10 +46,10 @@ class LoginViewController: UIViewController {
 
   // MARK: - Private Methode
 extension LoginViewController {
-    private func showAlert(title: String, message: String) {
+    private func showAlert(title: String, message: String){
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
-        //clear textField login after wrond try
+        //clear textField login after wrong try
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in self.logInTextField.text = ""
         }
         alert.addAction(okAction)
