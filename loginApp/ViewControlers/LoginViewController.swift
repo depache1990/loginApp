@@ -10,8 +10,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var logInTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
-    @IBOutlet weak var logInButton: UIButton!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -22,11 +20,11 @@ class LoginViewController: UIViewController {
         guard let tabBarViewController = segue.destination as? UITabBarController else { return }
         for viewController in tabBarViewController.viewControllers! {
             if let welcomeVC = viewController as? WelcomeViewController {
-            
-                welcomeVC.mainUserLabel = userInfo.userInfo.username
-    }
-            else if let myProfileVC = viewController as? myProfileViewController {
                 
+                welcomeVC.mainUserLabel = userInfo.userInfo.username
+            }
+        }
+    }
     
     @IBAction func forgotUserNameAction() {
         showAlert(title: "ooops", message: "Your password is \(userInfo.userInfo.username)")

@@ -9,6 +9,7 @@ struct PersonalInfo {
     let name: String
     let surname: String
     let mybirthday: String
+    let status: String
     let placeOfBirth: String
     let placeOfResidence: String
     let myHobby: [String]

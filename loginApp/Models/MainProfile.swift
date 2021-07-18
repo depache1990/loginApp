@@ -18,10 +18,11 @@ struct MainProfile{
             personalInfo: PersonalInfo(name: "Антон",
                                        surname: "Дуплин",
                                        mybirthday: "25.12.1990",
+                                       status: "Не женат",
                                        placeOfBirth: "Самара",
                                        placeOfResidence: "Афины",
                                        myHobby: ["Музыка","Сноуборд","Плавание","Кампинг","Видео Игры:)"],
-                                       workPosition: "Туризм,Гостиничный бизнес.(Бармен)")
+                                       workPosition: "Туризм,Гостиничный бизнес")
         )
     }
     

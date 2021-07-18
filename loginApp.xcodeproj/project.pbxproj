@@ -18,6 +18,7 @@
 		7FEE360B26A4A0F4004FAC06 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEE360A26A4A0F4004FAC06 /* UserInfo.swift */; };
 		7FEE360D26A4A111004FAC06 /* MainProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEE360C26A4A111004FAC06 /* MainProfile.swift */; };
 		7FEE360F26A4A9EA004FAC06 /* myProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEE360E26A4A9EA004FAC06 /* myProfileViewController.swift */; };
+		7FEE361126A4C8FF004FAC06 /* moreInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEE361026A4C8FF004FAC06 /* moreInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		7FEE360A26A4A0F4004FAC06 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		7FEE360C26A4A111004FAC06 /* MainProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProfile.swift; sourceTree = "<group>"; };
 		7FEE360E26A4A9EA004FAC06 /* myProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myProfileViewController.swift; sourceTree = "<group>"; };
+		7FEE361026A4C8FF004FAC06 /* moreInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moreInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				7F82A2E8269CD682006D3323 /* LoginViewController.swift */,
 				7F82A2F8269D8B4F006D3323 /* WelcomeViewController.swift */,
 				7FEE360E26A4A9EA004FAC06 /* myProfileViewController.swift */,
+				7FEE361026A4C8FF004FAC06 /* moreInfoViewController.swift */,
 			);
 			path = ViewControlers;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 				7F82A2E5269CD682006D3323 /* AppDelegate.swift in Sources */,
 				7FEE360926A4A0E3004FAC06 /* PersonalInfo.swift in Sources */,
 				7FEE360F26A4A9EA004FAC06 /* myProfileViewController.swift in Sources */,
+				7FEE361126A4C8FF004FAC06 /* moreInfoViewController.swift in Sources */,
 				7F82A2E7269CD682006D3323 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
