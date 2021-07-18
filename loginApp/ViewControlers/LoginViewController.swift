@@ -16,20 +16,27 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    private let userInfo = MainProfile.getMyProfile()
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let settingVC = segue.destination as? WelcomeViewController else { return }
-        settingVC.mainUserLabel = logInTextField.text
+        guard let tabBarViewController = segue.destination as? UITabBarController else { return }
+        for viewController in tabBarViewController.viewControllers! {
+            if let welcomeVC = viewController as? WelcomeViewController {
+            
+                welcomeVC.mainUserLabel = userInfo.userInfo.username
     }
+            else if let myProfileVC = viewController as? myProfileViewController {
+                
     
     @IBAction func forgotUserNameAction() {
-        showAlert(title: "ooops", message: "Your password is eugenia")
+        showAlert(title: "ooops", message: "Your password is \(userInfo.userInfo.username)")
     }
     @IBAction func forgotPasswordAction() {
-        showAlert(title: "ooops", message: "Your password is 123456")
+        showAlert(title: "ooops", message: "Your password is \(userInfo.userInfo.password)")
         passwordTextField.text = ""
     }
     @IBAction func logInAction(_ sender: UIButton) {
-        if logInTextField.text == userName && passwordTextField.text == password {
+        if logInTextField.text == userInfo.userInfo.username && passwordTextField.text == userInfo.userInfo.password {
         } else {
             showAlert(title: "Oooops", message: "Wrong password or user name,please try again")
         }
@@ -49,5 +56,4 @@ extension LoginViewController {
         present(alert, animated: true)
     }
 }
-private let userName = "eugenia"
-private let password = "123456"
+
