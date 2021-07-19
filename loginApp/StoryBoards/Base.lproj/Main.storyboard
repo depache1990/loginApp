@@ -337,11 +337,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xel-To-Ybj">
-                        <barButtonItem key="rightBarButtonItem" title="Выход" id="deD-0P-ECy">
-                            <connections>
-                                <segue destination="8ts-jv-HTe" kind="presentation" modalPresentationStyle="fullScreen" id="zx3-vE-6Xi"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Выход" id="deD-0P-ECy"/>
                     </navigationItem>
                     <connections>
                         <outlet property="hobbyOU" destination="yAI-O9-pdl" id="2sY-tE-0Uz"/>
@@ -394,9 +390,6 @@
             <point key="canvasLocation" x="5386" y="78"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="zx3-vE-6Xi"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="WX509KCRlDI" width="1620" height="2160"/>
         <systemColor name="labelColor">

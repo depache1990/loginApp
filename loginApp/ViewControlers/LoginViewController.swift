@@ -22,9 +22,15 @@ class LoginViewController: UIViewController {
             if let welcomeVC = viewController as? WelcomeViewController {
                 
                 welcomeVC.mainUserLabel = userInfo.userInfo.username
+                // send models to navigationViewController
+            } else if let navigationVC = viewController as? UINavigationController {
+                let myProfileVC = navigationVC.topViewController as? myProfileViewController
+                myProfileVC?.userInfo = userInfo
+            
             }
         }
     }
+
     
     @IBAction func forgotUserNameAction() {
         showAlert(title: "ooops", message: "Your password is \(userInfo.userInfo.username)")

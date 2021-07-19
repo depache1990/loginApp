@@ -15,7 +15,7 @@ class myProfileViewController: UIViewController {
     @IBOutlet weak var myBirthdayLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
     
-    private let userInfo = MainProfile.getMyProfile()
+    var userInfo: MainProfile!
     
     override func viewDidLoad() {
         super.viewDidLoad()

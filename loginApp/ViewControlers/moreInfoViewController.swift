@@ -19,7 +19,7 @@ class moreInfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        placeOfBirthOU.text = userInfo.personalInfo.mybirthday
+        placeOfBirthOU.text = userInfo.personalInfo.placeOfBirth
         placeOfResidenceOU.text = userInfo.personalInfo.placeOfResidence
         hobbyOU.text = userInfo.personalInfo.myHobby.randomElement()
         workPositionOU.text = userInfo.personalInfo.workPosition
@@ -28,7 +28,9 @@ class moreInfoViewController: UIViewController {
         
     }
     
+
+    }
     
     
     
-}
+
